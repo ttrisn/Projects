@@ -1,0 +1,26 @@
+CREATE TABLE Triston_Closet(
+id integer PRIMARY KEY,
+gender TEXT,
+bottom_type TEXT,
+color TEXT,
+price integer,
+size integer
+);
+insert into Triston_Closet values (1,'Male','Shirts','Dark Purple', 20.50, 23);
+insert into Triston_Closet values (2,'Male','Shirts','Dark Blue', 10.59, 30);
+insert into Triston_Closet values (3,'Male','Jeans','Dark Blue', 7.50, 20);
+insert into Triston_Closet values (4,'Male','Shirts','Dark Gray Faded', 15.50, 30);
+insert into Triston_Closet values (5,'Male','Jeans','Black', 9.50, 30);
+insert into Triston_Closet values (6,'Male','Jeans','Faded white', 36.70, 30);
+insert into Triston_Closet values (7,'Male','Jeans','Black Faded', 7.84, 22);
+insert into Triston_Closet values (8,'Women','Shorts','Green', 10.30, 26);
+insert into Triston_Closet values (9,'Women','Shorts','Red', 10.50, 26);
+insert into Triston_Closet values (10,'F','Shorts','Green', 12.50, 26);
+insert into Triston_Closet values (11,'F','Summer vests','Gray White', 10.50, 26);
+insert into Triston_Closet values (12,'Women','Tshirt','Sky Blue', 9.60, 26);
+insert into Triston_Closet values (13,'Women','Tshirt','Tinted Blue', 19.99, 28);
+insert into Triston_Closet values (14,'Women','Jeans','hazel Blue', 16.85, 10);
+insert into Triston_Closet values (15,'Women','Jeans', 'Pitch Black', 19.99, 10);
+select * from Triston_Closet order by price;
+
+select bottom_type, sum(price) from Triston_Closet group by bottom_type
